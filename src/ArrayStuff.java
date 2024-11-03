@@ -12,9 +12,19 @@ public class ArrayStuff {
         boolean found = false;
         int highest = -1;
         int lowest = 101;
+        int sum = 0;
+        int average = 0;
+
 
         setData();
         showData();
+
+        for (int i = 0; i < dataPoints.length; i++) {
+            sum += dataPoints[i];
+            average = sum / dataPoints.length;
+        }
+        System.out.println("The sum of the array is: " + sum);
+        System.out.println("The average of the array is: " + average);
 
         int target = SafeInput.getRangedInt(in, "Enter the target", 1,100);
         // FindAll
